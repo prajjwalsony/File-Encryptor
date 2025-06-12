@@ -1,0 +1,2 @@
+windres Secure.rc -o rc.o
+gcc appV2.c rc.o -o Secure.exe -mwindows -lcomdlg32 -lshlwapi -lgdi32

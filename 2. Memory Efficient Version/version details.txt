@@ -1,0 +1,6 @@
+Problem With previous implementation: Opening whole file in memory is very inefficient, which also limits the size of file to be processed
+
+Solution in this implementation : Getting the chunk of data from file, processing it then appending to output file
+
+V1 : Basic implementaion of logic, storing the key in first byte of encrypted block and showing completion status on terminal
+V2 : More information in terminal

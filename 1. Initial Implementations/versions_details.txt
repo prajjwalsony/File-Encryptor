@@ -1,0 +1,3 @@
+V1 : Basic Logic and code structure and Open with feature
+V2 : More information on terminal. Holding the terminal after completion
+V3 : Automatically starting the file after successful decryption

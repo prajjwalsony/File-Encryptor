@@ -1,0 +1,5 @@
+Problem in Previous version : Very buggy, scattered and inefficient codes
+
+Improvement : lesser lines of codes reducing unnecessary computation, fixed previous bugs, changing byte representaion in previous from from char to int helping to perform bitwise operations easily and efficiently. Acheived the encryption/decryption rate from previous version having less then 1MB/S to 8.5MB/S
+
+Also disply real time completion status, processing speed and time taken to complete

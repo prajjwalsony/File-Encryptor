@@ -1,0 +1,18 @@
+Previous Versions Problems : Very Low Security due to simple xor operation between bytes and key
+
+Improvement : Used Modified DES based encryption in which block size is 1 byte and key size is 14 bytes. Further the round function is modified to fit 4 bit data and 6 bit round key. Number of round is reduced to 4. Round Key generation processis also modified to take 14 bit key and produce 6 bit round key.
+
+hash.c : xor the rght and left byte of key to produce a single byte hash value to be stored in first byte of encrypted file for key verification
+
+function.c : It has implementaion of feistal cypher function used in each round
+
+generate_key.c : contains the implementaion of key generation schedule for each round
+
+DES.c : contains the final implementaion of encryption/decryption using function.c and 
+
+generate_key.c . It takes input byte and 14 bit key and finally return encrypted byte
+
+compact_function.c : integrated and lesser line of codes version of function.c solving memory leak problem in original one
+
+compact_DES.c : integrated and lesser line of codes version of DES.c integration fiestal cipher function, key generation and encryption/decryption in same file solving memory leak problem in original one
+

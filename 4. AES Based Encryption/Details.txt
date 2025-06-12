@@ -1,0 +1,11 @@
+Problem in Previous DES based implementaion : the processing speed was ~8 MBPS, not enough for practical application. The 14 bit key was to easy to be cracked
+
+Improvement : The modified AES implementaion not only improved the security but also increased speed. The the processing speed reaches upto 28MB/s, near to practical implementaion. The modified AES uses both block size and key size of 32 bit with word lenght of 8-bit. In the round function of AES, the third step of mixColumns has been removed due to complexity of both implementaion and speed. Except that all the 3 steps of subByte, rotateWord and Xor with key has been implmented. The number of round is reduces to 3. The round key generation is nearly same as of original AES, except for word size of 8-bit.
+
+hash.c : return xor of all four bytes of 32 bit key, to be store in first byte of encrypted file for key verification
+
+data.c : contains all the mapping table of byte substution of subSyte ans invSubByte
+
+AES.c : contain round, invRound and final function for performing encryption/decryption
+
+generate_key.c : contain the key generation implmention upto 11 rounds
