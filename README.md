@@ -20,7 +20,7 @@ Welcome to the File Encryption Tool documentation. This guide is for readers to 
 **Why Use**:
 
 * **Simplicity**: Intuitive point‑and‑click interface with minimal configuration.
-* **Speed**: Process large files (up to gigabytes) at \~28 MB/s without worrying about memory limitations.
+* **Speed**: Process large files (up to gigabytes) at \~55 MB/s(at 3.0-3.5 GHz AMD Ryzen5) without worrying about memory limitations.
 * **Moderate Security**: 32‑bit key protection prevent casual snooping and secures personal documents.
 
 ### 1.2. For Programmers (AES API)
@@ -95,7 +95,7 @@ To boost performance and code quality, we optimised the previous DES-based appro
 * **Bug Fixes & Efficiency**:
 
   * Removed redundant loops and improved buffer handling.
-* **Real-Time Metrics**: Displays completion level and current throughput (up to 8.5 MB/s).
+* **Real-Time Metrics**: Displays completion level and current throughput (up to 17 MB/s(at 3.0-3.5 GHz AMD Ryzen5)).
 
 **Pros**:
 
@@ -106,7 +106,7 @@ To boost performance and code quality, we optimised the previous DES-based appro
 **Cons**:
 
 * Still not as secure as due to small key range of 14 bit.
-* 8.5 MB/s throughput may be insufficient for very large files.
+* 17 MB/s(at 3.0-3.5 GHz AMD Ryzen5) throughput may be insufficient for very large files.
 
 **Use Cases**:
 
@@ -121,10 +121,10 @@ To boost performance and code quality, we optimised the previous DES-based appro
 
 Despite improvements in our DES variant, two main issues persisted:
 
-1. **Throughput Ceiling**: DES-based rate maxed at \~8.5 MB/s.
+1. **Throughput Ceiling**: DES-based rate maxed at \~17 MB/s(at 3.0-3.5 GHz AMD Ryzen5).
 2. **Key Strength**: 14-byte keys are susceptible to brute-force attacks.
 
-We designed a custom AES-like cipher to deliver both higher speed and stronger keys, targeting \~30 MB/s throughput and a 32-bit key size.
+We designed a custom AES-like cipher to deliver both higher speed and stronger keys, targeting \~50 MB/s throughput and a 32-bit key size.
 
 ### 4.2. Algorithm Overview
 
@@ -159,12 +159,12 @@ Our modified AES retains core AES concepts but adapts them for simplicity and pe
 
 ### 4.4. Performance & Security Trade-offs
 
-| Aspect                 | Benefit                           | Trade-off                              |
-| ---------------------- | --------------------------------- | -------------------------------------- |
-| **Throughput**         | Up to 28 MB/s                     | Slightly above practical desktop needs |
-| **Key Strength**       | 2^32 (\~4.3 billion) combinations | Far less than AES-128 (2^128)          |
-| **Rounds (3)**         | Faster per-block processing       | Weaker diffusion vs. 10-round AES-128  |
-| **MixColumns Omitted** | Simplifies code and boosts speed  | Reduces inter-byte mixing of data      |
+| Aspect                 | Benefit                                  | Trade-off                              |
+| ---------------------- | ---------------------------------------- | -------------------------------------- |
+| **Throughput**         | Up to 55 MB/s(at 3.0-3.5 GHz AMD Ryzen5) | Slightly above practical desktop needs |
+| **Key Strength**       | 2^32 (\~4.3 billion) combinations        | Far less than AES-128 (2^128)          |
+| **Rounds (3)**         | Faster per-block processing              | Weaker diffusion vs. 10-round AES-128  |
+| **MixColumns Omitted** | Simplifies code and boosts speed         | Reduces inter-byte mixing of data      |
 
 **Overall Pros**:
 
