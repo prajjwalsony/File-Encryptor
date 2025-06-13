@@ -18,6 +18,7 @@ int operate(FILE *readFile, FILE *writeFile, int key){
     int readSize=1;
     while(readFile && readSize){
         readSize = (fread(bytes, sizeof(char), 1024*1024, readFile));
+        for(int i=0; i<readSize; i++) bytes[i] = bytes[i] ^ key;
         totalReadSize += readSize;
         int writeSize = fwrite(bytes, sizeof(char), readSize, writeFile);
         totalWriteSize += writeSize;
