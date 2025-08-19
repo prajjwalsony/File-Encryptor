@@ -161,7 +161,7 @@ Our modified AES retains core AES concepts but adapts them for simplicity and pe
 
 | Aspect                 | Benefit                                  | Trade-off                              |
 | ---------------------- | ---------------------------------------- | -------------------------------------- |
-| **Throughput**         | Up to 55 MB/s(at 3.0-3.5 GHz AMD Ryzen5) | Slightly above practical desktop needs |
+| **Throughput**         | Up to 75 MB/s(intel i5 12Gen) | Slightly above practical desktop needs |
 | **Key Strength**       | 2^32 (\~4.3 billion) combinations        | Far less than AES-128 (2^128)          |
 | **Rounds (3)**         | Faster per-block processing              | Weaker diffusion vs. 10-round AES-128  |
 | **MixColumns Omitted** | Simplifies code and boosts speed         | Reduces inter-byte mixing of data      |
