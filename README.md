@@ -20,7 +20,7 @@ Welcome to the File Encryption Tool documentation. This guide is for readers to 
 **Why Use**:
 
 * **Simplicity**: Intuitive point‑and‑click interface with minimal configuration.
-* **Speed**: Process large files (up to gigabytes) at \~75 MB/s(i5 12Gen) without worrying about memory limitations.
+* **Speed**: Process large files (up to gigabytes) at \~75 MB/s(intel i5 12Gen) without worrying about memory limitations.
 * **Moderate Security**: 32‑bit key protection prevent casual snooping and secures personal documents.
 
 ### 1.2. For Programmers (AES API)
