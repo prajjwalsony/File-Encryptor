@@ -20,7 +20,6 @@ keys and returned encrypted/decrypted 32 bit data buffer
 //32 bit key input
 //32 bit output
 
-// #include "data.h"
 #include <stdlib.h>
 
 #define uint unsigned int

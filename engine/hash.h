@@ -1,19 +1,3 @@
-/*
-UPDATE HISTORY:
-11/06/2025 - first made
-xx/xx/xxxx - file description added
-
--------------------------------------------------------------------------------
-
-DEPENDENCIES:
-standard - stdlib.h
-
--------------------------------------------------------------------------------
-
-FILE DESCRIPTION:
-hash.h contains the hash function to be used to store the password in the file data
-*/
-
 #include <stdlib.h>
 
 // simple hash function

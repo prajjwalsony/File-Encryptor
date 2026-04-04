@@ -1,26 +1,8 @@
-/*
-UPDATE HISTORY:
-11/06/2025 - first made
-xx/xx/xxxx - file description added
-
--------------------------------------------------------------------------------
-
-DEPENDENCIES:
-standard - stdlib.h
-non standard - data.h
-
--------------------------------------------------------------------------------
-
-FILE DESCRIPTION:
-generate_key.h contains function to generate the round keys
-*/
-
 //32 bit key
 //8 bit word
 //max 11 round
 //32 bit round key
 
-#include "data.h"
 #include <stdlib.h>
 
 #define uint unsigned int
