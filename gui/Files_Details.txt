@@ -1,0 +1,5 @@
+AES.c | data.c | generate_key.c | hash.c : All these are header file core encryption logic
+
+AES_Encrypter : this is the library file. It has AES() function which takes fileLocation and key and create a encrypted/decrypted file at input file location with .encrypt extension (for encrypted file)
+
+appV1.c | appV2.c : GUI source code for window application
